@@ -1,0 +1,12 @@
+.container {
+  background: #494848 url(../images/main_bg.png) no-repeat top center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  position: relative; }
+  .container .inner-container {
+    padding: 87px 28px 0 60px; }
+    @media screen and (max-width: 768px) {
+      .container .inner-container {
+        padding: 87px 20px 30px 20px; } }

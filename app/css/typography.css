@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'AlfaSlabOne';
+  src: url("../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf") format("truetype");
+  font-weight: normal; }
+
+h1 {
+  font-family: 'AlfaSlabOne';
+  color: #50e3c2;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased; }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #aaa;
+  margin: 15px 0 0; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #777; }

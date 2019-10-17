@@ -1,0 +1,28 @@
+body {
+    background: #eee;
+    margin: 0;
+}
+
+
+header {
+    position: fixed;
+    background-image: linear-gradient(45deg, #50e3c2 40%, #394442 40%, #394442 50%, #50e3c2 50%, #50e3c2 90%, #394442 90%, #394442 100%);
+    background-size: 16px 16px;
+    height: 40px;
+    width: inherit;
+    max-width: inherit;
+    z-index: 10;
+    #logo {
+        img {
+            @media screen and (max-width: 768px) {
+                width: 185px;
+                left: 18px;
+                top: 22px;
+            }
+            position: relative;
+            width: 250px;
+            left: 60px;
+            top: 15px;
+        }
+    }
+}

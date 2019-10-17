@@ -1,0 +1,72 @@
+#video-preview.hide {
+  height: 0px;
+  opacity: 0;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden; }
+
+#video-preview.default {
+  height: 100%;
+  opacity: 1;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: relative; }
+
+#video-preview article {
+  display: inline-block;
+  width: 33.333%;
+  height: 300px;
+  padding: 0 27px 0 0;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow: auto;
+  cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    #video-preview article {
+      width: 100%;
+      max-width: 480px;
+      padding: 10px 0;
+      height: auto;
+      margin: 0 auto;
+      display: block; } }
+  #video-preview article .video-outer-holder {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden; }
+    #video-preview article .video-outer-holder .video-holder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      #video-preview article .video-outer-holder .video-holder .title {
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.6); }
+        #video-preview article .video-outer-holder .video-holder .title h1 {
+          max-width: 175px; }
+      #video-preview article .video-outer-holder .video-holder .play-icon {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        bottom: 11px;
+        right: 13px; }
+  #video-preview article .details {
+    position: relative; }
+    #video-preview article .details p {
+      max-height: 65px;
+      overflow: hidden; }

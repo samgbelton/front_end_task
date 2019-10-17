@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>MusicPlay</title>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/containers.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/video-preview.css">
+  <link rel="stylesheet" href="css/video-player.css">
+  <!--endbuild-->
+  <!--build:js js/main.min.js -->
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body ng-app="musicPlay">
+    <div ng-controller="mainController">
+        <div class="container">
+            <header>
+                <div id="logo">
+                    <img src="images/MusicPlay_logo.png">
+                </div>
+            </header>
+            <div id="video-player" ng-class="{'default':!transition, 'active':transition}">
+                <div class="inner-container">
+                    <div class="video-container">
+                        <div ng-bind-html="getMainVid"></div>
+                    </div>
+                    <div class="video-info">
+                        <h1>{{title}}</h1>
+                        <h2>{{publishedOn}}</h2>
+                        <p>{{description}}</p>
+                        <div ng-click="transition = !transition;" class="back-button"><h2>Back to list</h2></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="video-preview" ng-class="{'default':!transition, 'hide':transition}">
+                <div class="inner-container">
+                    <div ng-click="transition = !transition;">
+                        <article ng-repeat="item in videos" ng-click="getKey($event); toTheTop();" class="item" data-key="{{item.snippet.resourceId.videoId}}">
+                            <div class="video-outer-holder">
+                                <div class="video-holder" style="background-image: url({{item.snippet.thumbnails.high.url}})">
+                                    <div class="title">
+                                        <h1>{{item.snippet.title}}</h1>
+                                        <img src="images/play_button.png" alt="" class="play-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <h2>Published on {{item.contentDetails.videoPublishedAt | date : 'mediumDate'}}</h2>
+                                <p>{{item.snippet.description}}</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
